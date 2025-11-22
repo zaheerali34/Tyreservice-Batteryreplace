@@ -1,12 +1,22 @@
-import React from 'react'
-import HeroSlider from '../Components/HeroSlider.jsx';
+import React from "react";
+import HeroSlider from "../Components/HeroSlider.jsx";
+import Choose from "../Components/Choose.jsx";
+import ChooseUsCard from "../Components/ChooseUsCard.jsx";
+import About from "../Components/About.jsx";
+import CounterSection from "../Components/CounterSection.jsx";
+import Services from "../Components/Services.jsx";
 
 function LandingPage() {
   return (
-    <div>
+    <>
       <HeroSlider />
-    </div>
-  )
+      <Choose />
+      <ChooseUsCard />
+      <About />
+      <CounterSection />
+      <Services />
+    </>
+  );
 }
 
-export default LandingPage
+export default LandingPage;

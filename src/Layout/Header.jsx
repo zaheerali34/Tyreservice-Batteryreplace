@@ -1,91 +1,100 @@
-import React from 'react'
-import { Rocket, Phone, MapPin, Mail, Car, ArrowRight } from 'lucide-react'
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Phone, MapPin, Mail, Car, ArrowRight, } from 'lucide-react';
 
-function Header() {
-  // Add animation classes for left/right entrance using Tailwind CSS
+function Header () {
   return (
-    <header className="w-full">
-      <div className="bg-[#0B5E5F] text-white py-2 animate-[slide-in-left_0.7s_ease-out]">
-        <div className="mx-auto">
-          <div className="flex flex-wrap items-center justify-between text-xs md:text-sm gap-2">
-            <div className="flex flex-wrap items-center gap-3 md:gap-6">
-              <div className="flex items-center gap-2 py-2 animate-[discord-left-to-right_0.8s_ease-out]">
-                <span className="whitespace-nowrap">💥 Double Deal! Buy 4 Tyres & Get FREE Battery Health Check + Complimentary Installation 🚀 24/7 Mobile Service Dubai | 📞 Call +971 52 562 3674</span>
-              </div>
-            </div>
+    <header className="w-full relative z-50 font-sans">
+      <div className="bg-[#0B5E5F] text-white py-2 overflow-hidden">
+        <div className="mx-auto w-full">
+          <div className="flex items-center overflow-hidden whitespace-nowrap relative">
+            <motion.div 
+              className="flex items-center gap-12 text-xs md:text-sm font-medium"
+              
+              animate={{ x: ["100%", "-100%"] }} 
+              transition={{ 
+                repeat: Infinity, 
+                duration: 25, 
+                ease: "linear" 
+              }}
+              style={{ width: "fit-content" }} 
+            >
+              <span className="flex items-center gap-2">
+💥 Double Deal! Buy 4 Tyres & Get FREE Battery Health Check + Complimentary Installation 🚀 24/7 Mobile Service Dubai | 📞 Call +971 52 562 3674
+              </span>
+            </motion.div>
+
           </div>
         </div>
       </div>
 
-      <div className="bg-gray-100 text-gray-700 py-2 animate-[slide-in-right_0.7s_ease-out]">
-        <div className="px-14 py-2 mx-auto">
+      <motion.div 
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.2 }}
+        className="bg-gray-100 text-gray-700 py-2 hidden md:block border-b border-gray-200"
+      >
+        <div className="px-6 lg:px-14 py-2 mx-auto max-w-7xl">
           <div className="flex flex-wrap items-center justify-between text-xs md:text-sm gap-2">
             <div className="flex flex-wrap items-center gap-3 md:gap-6">
-              <div className="flex items-center gap-2 animate-[discord-left-to-right_0.8s_ease-out]">
+              <div className="flex items-center gap-2 hover:text-[#0B5E5F] transition-colors cursor-pointer">
                 <MapPin className="w-3 h-3 md:w-4 md:h-4 text-[#0B5E5F]" />
                 <span className="whitespace-nowrap">Dubai, United Arab Emirates</span>
               </div>
-              <div className="flex items-center gap-2 animate-[discord-left-to-right_0.8s_ease-out]">
+              <div className="flex items-center gap-2 hover:text-[#0B5E5F] transition-colors cursor-pointer">
                 <Mail className="w-3 h-3 md:w-4 md:h-4 text-[#0B5E5F]" />
                 <span className="whitespace-nowrap">admin@tyreservice.ae</span>
               </div>
             </div>
-            <div className="flex items-center gap-2 animate-[discord-left-to-right_0.8s_ease-out]">
-              <Phone className="w-3 h-3 md:w-4 md:h-4 text-[#0B5E5F]" />
+            <div className="flex items-center gap-2 font-bold text-[#0B5E5F]">
+              <Phone className="w-3 h-3 md:w-4 md:h-4" />
               <span className="whitespace-nowrap">+971 52 562 3674</span>
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
 
-      <div className="bg-white shadow-sm py-4 animate-[slide-in-left_0.7s_ease-out]">
-        <div className="px-14 mx-auto">
+      <motion.div 
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.3 }}
+        className="bg-white shadow-md py-4 sticky top-0 z-40"
+      >
+        <div className="px-6 lg:px-14 mx-auto max-w-7xl">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            {/* Logo */}
-            <div className="flex items-center gap-2 animate-[discord-left-to-right_0.8s_ease-out]">
-              <Car className="w-6 h-6 md:w-8 md:h-8 text-[#0B5E5F]" />
-              <h3 className="text-[2rem] max-md:text-xl font-bold text-[#0B5E5F]">
+            
+            <div className="flex items-center gap-2 cursor-pointer">
+              <div className="bg-[#0B5E5F] p-2 rounded-full shadow-sm">
+                <Car className="w-6 h-6 md:w-8 md:h-8 text-white" />
+              </div>
+              <h3 className="text-xl md:text-2xl font-bold text-[#0B5E5F] tracking-tight leading-none">
                 TyreServiceBatteryReplace
               </h3>
             </div>
 
-            {/* Navigation Links */}
-            <nav className="flex items-center gap-4 md:gap-8 flex-wrap justify-center animate-[discord-left-to-right_0.8s_ease-out]">
-              <a
-                href="#home"
-                className="font-medium hover:text-[#0B5E5F]/80 transition-colors text-sm md:text-base"
-              >
-                HOME
-              </a>
-              <a
-                href="#about"
-                className="font-medium hover:text-[#0B5E5F] transition-colors text-sm md:text-base"
-              >
-                ABOUT
-              </a>
-              <a
-                href="#services"
-                className="font-medium hover:text-[#0B5E5F] transition-colors text-sm md:text-base"
-              >
-                SERVICES
-              </a>
-              <a
-                href="#contact"
-                className="font-medium hover:text-[#0B5E5F] transition-colors text-sm md:text-base"
-              >
-                CONTACT
-              </a>
+            <nav className="flex items-center gap-4 md:gap-8 flex-wrap justify-center">
+              {['HOME', 'ABOUT', 'SERVICES', 'CONTACT'].map((item) => (
+                <a
+                  key={item}
+                  href={`#${item.toLowerCase()}`}
+                  className="font-medium text-gray-600 hover:text-[#0B5E5F] transition-colors text-sm md:text-base relative group py-2"
+                >
+                  {item}
+                  <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-[#0B5E5F] transition-all duration-300 group-hover:w-full"></span>
+                </a>
+              ))}
 
-                <button className="bg-[#0B5E5F] hover:bg-[#0B5E5F] text-white md:px-6 py-4 rounded-sm flex items-center gap-2 font-medium transition-colors text-sm md:text-base whitespace-nowrap cursor-pointer">
-              <span>WHATSAPP US</span>
-              <ArrowRight className="w-4 h-4" />
-            </button>
+              <button className="bg-[#0B5E5F] hover:bg-[#084546] text-white px-6 py-3 rounded-sm flex items-center gap-2 font-medium transition-all text-sm md:text-base whitespace-nowrap shadow-lg transform hover:-translate-y-0.5 active:translate-y-0">
+                <span>WHATSAPP US</span>
+                <ArrowRight className="w-4 h-4" />
+              </button>
             </nav>
+
           </div>
         </div>
-      </div>
+      </motion.div>
     </header>
-  )
+  );
 }
 
-export default Header
+export default Header;

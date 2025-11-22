@@ -16,8 +16,7 @@ const HeroSlider = () => {
       bgImage: "/12a.webp", 
       floatingImage: "/19a.webp", 
       subtitle: "// CAR SERVICING //",
-      title: "Your Trusted 24/7 Partner for Tyre Repairs",
-      highlight: "Your Trusted 24/7 Partner for Tyre Repairs & Battery Assistance in Dubai",
+      title: "Fast Tyre Service & Battery Replacement - 24/7 Support in Dubai",
       description: "Stay safe on the road with our round-the-clock tyre repair. Quick response and expert care, anytime you need us."
     },
     {
@@ -26,8 +25,7 @@ const HeroSlider = () => {
       // Oil bottles PNG example
       floatingImage: "/26a.webp", 
       subtitle: "// OIL CHANGE //",
-      title: "Premium Oil Change & Maintenance",
-      highlight: "– Best Prices",
+      title: "Your Trusted 24/7 Partner for Tyre Repairs & Battery Assistance in Dubai",
     }
   ];
 
@@ -76,7 +74,7 @@ const HeroSlider = () => {
                    <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/70 to-transparent"></div>
                 </div>
 
-                <div className="relative z-10 flex items-center h-full max-w-7xl mx-auto px-6 lg:px-12">
+                <div className="w-full relative z-10 flex items-center h-full max-w-7xl mx-auto px-6 lg:px-12">
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
                     
                     <div className="text-white max-w-2xl">
@@ -170,9 +168,9 @@ const HeroSlider = () => {
         ))}
       </Swiper>
 
-      <div className="absolute left-0 bottom-20 z-20 flex flex-col gap-2">
-        <a href="#" className="bg-green-600 hover:bg-green-700 text-white p-3 rounded-r-md shadow-lg"><MessageCircle className="w-6 h-6" /></a>
-        <a href="#" className="bg-[#006d77] hover:bg-[#005f6b] text-white p-3 rounded-r-md shadow-lg"><Phone className="w-6 h-6" /></a>
+      <div className="fixed left-6 bottom-20 z-20 flex flex-col gap-2">
+        <a href="#" className="bg-green-600 hover:bg-green-700 text-white p-3 rounded-md shadow-lg"><MessageCircle className="w-6 h-6" /></a>
+        <a href="#" className="bg-[#006d77] hover:bg-[#005f6b] text-white p-3 rounded-md shadow-lg"><Phone className="w-6 h-6" /></a>
       </div>
       <button onClick={() => swiperRef.current?.slidePrev()} className="absolute left-4 top-1/2 -translate-y-1/2 z-20 text-white/40 hover:text-white p-2 hidden md:block"><ChevronLeft className="w-12 h-12" /></button>
       <button onClick={() => swiperRef.current?.slideNext()} className="absolute right-4 top-1/2 -translate-y-1/2 z-20 text-white/40 hover:text-white p-2 hidden md:block"><ChevronRight className="w-12 h-12" /></button>
