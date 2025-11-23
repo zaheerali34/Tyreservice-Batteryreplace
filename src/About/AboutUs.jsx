@@ -3,25 +3,19 @@ import { motion, useInView } from "framer-motion";
 import AboutImg from "/about.webp";
 import { ArrowRight } from "lucide-react";
 
-function About() {
+function AboutUs() {
   const points = [
     {
       number: "01",
-      title: "Skilled & Certified Technicians",
+      title: "Leading the Way in Mobile Tyre & Battery Services",
       description:
-        "Our team of trained specialists ensures every job, from a simple tyre change to complex battery diagnostics, is done with accuracy, safety, and care.",
+        "Looking for more than just a repair? Our dedicated team combines hands-on expertise with advanced tools to deliver reliable tyre and battery solutions wherever you are. Whether you need mobile tyre fitting, emergency puncture repair, or a professional battery replacement in Dubai, we’re always ready to assist. Trust us to deliver with precision, speed, and care, every single time.",
     },
     {
       number: "02",
-      title: "Convenient Mobile Service",
+      title: "Your Reliable Hub for Quality Care",
       description:
-        "Why waste time at a workshop? We bring the service to your doorstep or roadside, saving you time while ensuring your vehicle is always ready for the road.",
-    },
-    {
-      number: "03",
-      title: "Affordable Pricing with Assurance",
-      description:
-        "Get the best of both worlds, competitive rates and reliable warranty on tyres and batteries. With us, you’ll always know you’re getting value you can trust.",
+        "At Tyre Service – Battery Replace, your vehicle’s performance and safety come first. We provide everything from quick roadside support to complete servicing with the same attention to detail. Our quality servicing standards ensure your tyres, batteries, and overall vehicle systems run smoothly. With us, you don’t just get a service, you gain a dependable partner committed to keeping you stress-free on the road.",
     },
   ];
 
@@ -64,7 +58,7 @@ function About() {
             </div>
           </motion.div>
 
-          <div className="space-y-8">
+          <div className="space-y-4">
             <motion.span
               initial={{ opacity: 0 }}
               animate={isInView ? { opacity: 1 } : {}}
@@ -77,21 +71,27 @@ function About() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.4, duration: 0.6 }}
-              className="text-4xl font-extrabold text-[#002A3A] leading-tight"
+              className="text-xl font-extrabold text-[#002A3A] leading-tight"
             >
-              Your Go-To Mobile Tyre & Battery Experts in Dubai
+              About Tyre Service - Battery Replace | Your Trusted Partner for Tyre & Battery Solutions in Dubai
             </motion.h2>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.5, duration: 0.6 }}
-              className="text-gray-600 text-base leading-relaxed border-l-4 border-[#0B5E5F]/50 pl-4 py-1"
+              className="text-gray-600 text-sm leading-relaxed border-l-4 border-[#0B5E5F]/50 pl-4 py-1"
             >
-              Since 2024, we’ve been providing on-site tyre replacement and
-              battery solutions across Dubai. Our mission is to keep drivers
-              safe and stress-free with fast, professional, and reliable
-              roadside support, anytime, anywhere.
+              Welcome to Tyre Service - Battery Replace, your reliable name in mobile tyre and battery services in Dubai! Since 2024, we’ve been committed to making roadside assistance faster, safer, and more convenient for drivers across the UAE. Our mission is simple: to keep you moving with confidence, whether it’s a quick tyre repair, a brand-new installation, or an urgent battery replacement at your location.
+            </motion.p>
+
+              <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ delay: 0.5, duration: 0.6 }}
+              className="text-gray-600 text-sm leading-relaxed border-l-4 border-[#0B5E5F]/50 pl-4"
+            >
+              With round-the-clock support and a growing network of trusted distributors, we’ve become the go-to solution for motorists who value efficiency, expertise, and quality. From emergency breakdowns to planned maintenance, we’re here to ensure your journey continues without interruptions.
             </motion.p>
 
             <div className="space-y-6 pt-4">
@@ -133,4 +133,4 @@ function About() {
   );
 }
 
-export default About;
+export default AboutUs;

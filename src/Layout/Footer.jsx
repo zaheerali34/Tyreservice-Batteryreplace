@@ -49,7 +49,7 @@ const Footer = () => {
     return (
         // Footer Component: Initial hidden, animate when in view
         <motion.footer 
-            className="bg-gray-950 text-gray-300 relative pt-16 md:pt-24 pb-8 overflow-hidden font-inter"
+            className="bg-gray-950 text-gray-300 relative py-16 md:pt-24 pb-8 overflow-hidden font-inter"
             initial="hidden"
             // Jab user footer tak scroll karega tab animation shuru hogi
             whileInView="visible"
