@@ -1,9 +1,16 @@
 import React from 'react'
+import Image from './Image'
+import OurServices from './OurServices'
+import Slider from './Slider'
 
 function Services() {
   return (
-    <div>Services</div>
+    <>
+     <Image/>
+     <OurServices />
+     <Slider />
+    </>
   )
 }
 
-export default Services
+export default Services;

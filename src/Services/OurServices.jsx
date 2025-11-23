@@ -13,40 +13,40 @@ import {
 const servicesData = [
   {
     id: "tyre-repair",
-    icon: Settings, // Using Settings icon for Repair
-    title: "Tyre Repair",
+    icon: Settings, 
+    title: "Battery Installation & Replacement in Dubai",
     description:
-      "Get back on the road quickly with our efficient tyre repair solutions. Whether it's a puncture or pressure issue, our mobile tyre repair service in Dubai is just a call away.",
+      "Are You Looking For a Mobile Car Battery Replacement in Dubai? Picture this: You're all set to leave an important meeting, but as you turn the key, silence. A dead battery! No need to stress. Our Mobile Battery Installation & Replacement Service in Dubai is here to save your day. Whether your car refuses to start in a mall parking lot, at home, or on a busy Dubai street, our expert team will reach you quickly. We'll test your old battery, recommend the right replacement, and install it on the spot so you can get back on track without wasting time. Here's why drivers choose us ",
     points: [
-      "Comprehensive Repairs: From small punctures to balancing, we restore your tyres to top condition.",
-      "Mobile Assistance: We bring tyre repair to your location for maximum convenience.",
-      "Reliable Results: Our experts ensure your tyres are safe, durable, and road-ready.",
+      " Genuine Car Batteries: We only supply high-quality, long-lasting batteries from trusted brands to ensure reliable performance.",
+      " Expert Installation: Our technicians are trained to fit your battery safely and efficiently, minimizing downtime.",
+      " 24/7 Emergency Help: Day or night, we're always ready to replace your dead battery anywhere in Dubai.",
     ],
-    image: "/services 2.webp", // Mechanic repairing a tyre/brake
+    image: "/services 2.webp",
   },
   {
-    id: "battery-installation",
+    id: "Tyre Repair Services",
     icon: Battery,
     title: "Battery Installation",
     description:
-      "Our fast and reliable battery installation service in Dubai ensures your vehicle never leaves you stranded. From quick replacements to diagnostics, we handle everything on the spot with expert care.",
+      "Need Quick & Reliable Tyre Repair in Dubai? Flat tyre in the middle of your journey? We know how frustrating that can be. That's why our On-the-Spot Tyre Repair Service is designed to bring peace of mind wherever you are in Dubai. Imagine being stuck with a puncture at night, instead of waiting hours for a tow, just give us a call! Our mobile team arrives with advanced tools, fixes your puncture safely, and gets you rolling again in no time. What you get with us:",
     points: [
-      " Quality Batteries: We provide only trusted and durable battery brands for long-lasting performance.",
-      " Expert Technicians: Our skilled team ensures safe installation and reliable testing before you get back on the road.",
-      " Emergency Support: Available 24/7, we'll reach you anywhere in Dubai for quick battery assistance.",
+      "  Professional Puncture Repair: We use advanced sealing and patching methods to restore your tyre's safety.",
+      " Mobile Tyre Service: No need to visit a shop, our team comes directly to you.",
+      " Durable Results: Our repairs are designed to last, giving you safe miles ahead.",
     ],
     image: "/services 1.webp",
   },
   {
-    id: "tyre-installation",
+    id: "Tyre Installation & Replacement",
     icon: Truck,
     title: "Tyre Installation",
     description:
-      "Upgrade your driving experience with our seamless new tyre installation service in Dubai. We provide the right fit for your car, ensuring safety and performance.",
+      "Searching for Emergency Tyre Installation in Dubai? Driving with worn-out tyres is risky, and a sudden burst can ruin your journey. But here's the good news: with our Mobile Tyre Installation & Replacement Service, you don't have to stress. Stranded on Sheikh Zayed Road, stuck at your villa, or parked at a mall? Our team arrives with a wide range of premium tyres, installs them quickly, and ensures perfect fitting so you can hit the road again with full confidence. Here's why we stand out:",
     points: [
-      " Wide Range of Tyres: Choose from premium brands and sizes that suit your vehicle perfectly.",
-      " Professional Installation: Our team handles mounting, balancing, and alignment with precision.",
-      " Safety First: Every tyre is checked thoroughly to guarantee smooth and secure driving.",
+      " Premium Tyre Brands: We stock tyres from world-class manufacturers for maximum safety and performance.",
+      " Fast On-Site Replacement: Get new tyres installed wherever you are, roadside, home, or office.",
+      " Safe & Precise Fitting: Our technicians ensure balanced, secure installation for smooth driving.",
     ],
     image: "/services 3.webp",
   },
@@ -55,17 +55,17 @@ const servicesData = [
     icon: Zap,
     title: "Car Jump Start",
     description:
-      "Dead battery? Our car jump start service in Dubai helps you get moving again in minutes. Quick, efficient, and available round the clock, we've got your back.",
+      "Looking for Emergency Car Jump Start in Dubai? Nothing feels worse than turning the key and hearing just a click. Dead batteries can leave you stuck anywhere, but we've got your back with our 24/7 Car Jump Start Service in Dubai. Whether your car has been idle too long or the battery suddenly drains, our team arrives with the right tools to revive it instantly. No delays, no worries, just fast, professional help when you need it most. Why trust us?",
     points: [
-      " Instant Response: Reach us anytime for immediate roadside jump start support.",
-      " Safe & Reliable: Our technicians use the proper tools to protect your battery and car's electrical system.",
-      " 24/7 Availability: No matter the time, we'll be there to restart your journey.",
+      " Quick Response Team: Our mobile crew reaches you promptly to get your car running again.",
+      " Safe Jump-Start Methods: We use modern tools to protect your vehicle's electrical system during the boost.",
+      " Always Available: Day, night, weekends, or holidays, we're just one call away.",
     ],
     image: "/services 4.webp",
   },
 ];
 
-function Services() {
+function OurServices() {
   const [activeTab, setActiveTab] = useState(servicesData[0].id);
   const activeService = servicesData.find((s) => s.id === activeTab);
 
@@ -74,7 +74,10 @@ function Services() {
 
   return (
     <>
-      <section className="w-full max-lg:h-[180vh] py-24 bg-white font-sans" ref={ref}>
+      <section
+        className="w-full h-full py-24 font-sans max-md:h-[210vh]"
+        ref={ref}
+      >
         <div className="max-w-7xl mx-auto px-6 lg:px-14">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -88,7 +91,7 @@ function Services() {
             <br />
             <h2 className="text-3xl md:text-4xl font-extrabold text-[#002A3A] mt-2 inline-flex items-center gap-4">
               <Car className="text-gray-700 w-8 h-8" />
-              Explore Our Best Services
+              Explore Our Services
               <Car className="text-gray-700 w-8 h-8 scale-x-[-1]" />
             </h2>
             <div className="h-1 w-20 bg-[#0B5E5F] mx-auto mt-4 rounded-full"></div>
@@ -180,39 +183,8 @@ function Services() {
           </div>
         </div>
       </section>
-
-      <motion.div 
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.8 }}
-      
-      className="w-full h-[30vh] max-md:h-full bg-[url('/9a.webp')] bg-cover bg-center bg-no-repeat mt-20">
-        <div className="w-full h-full bg-[#000000d0] text-center flex flex-col justify-center items-center px-6">
-          <motion.h1 
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1 }}
-          className="text-2xl font-bold text-white">
-            Trusted & Recognized Mobile Tyre and Battery Service in Dubai
-          </motion.h1>
-          <motion.p 
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1.3, delay: 0.3 }}
-          className="text-white pt-5">
-            We take pride in being one of Dubai’s most reliable mobile tyre and
-            battery service providers. Backed by a team of skilled technicians
-            and advanced tools, we deliver fast, professional, and dependable
-            automotive care right at your doorstep. Over the years, our
-            dedication to quality service has earned us recognition and the
-            trust of countless customers across the UAE. Rely on us for tyre
-            repairs, battery replacements, and emergency assistance, all
-            delivered with the highest standard of professionalism and care.
-          </motion.p>
-        </div>
-      </motion.div>
     </>
   );
 }
 
-export default  Services;
+export default OurServices;

@@ -1,8 +1,13 @@
 import React from 'react'
+import Image from './Image'
+import Map from './Map'
 
 function Contact() {
   return (
-    <div>Contact</div>
+    <>
+      <Image />
+      <Map />
+    </>
   )
 }
 
