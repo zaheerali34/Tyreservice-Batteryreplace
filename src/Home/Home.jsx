@@ -5,6 +5,7 @@ import ChooseUsCard from "../Components/ChooseUsCard.jsx";
 import About from "../Components/About.jsx";
 import CounterSection from "../Components/CounterSection.jsx";
 import Services from "../Components/Services.jsx";
+import Slider from "../Components/Slider.jsx";
 
 function LandingPage() {
   return (
@@ -15,6 +16,7 @@ function LandingPage() {
       <About />
       <CounterSection />
       <Services />
+      <Slider />
     </>
   );
 }
